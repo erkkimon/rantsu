@@ -1,0 +1,53 @@
+/*
+ * Theme Name: rantakuntoon.fi 
+ * Theme URI: http://rantakuntoon.fi
+ * Author: Tom Himanen
+ * Author URI: http://rantakuntoon.fi/
+ * Description: Blaaklaader.
+ * Version: 0.1
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: rantakuntoonfi 
+ * */
+
+/* FONTS */
+
+@font-face {
+  font-family: "simplifica";
+  src: url('/fonts/simplifica/simplifica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "gandi-sans-regular";
+  src: url('/fonts/simplifica/gandi-sans-regular.ttf') format('truetype');
+}
+
+/* ELEMENTS */
+
+html,
+body {
+  background: #fff;
+  font-family: "gandi-sans-regular";
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "simplifica";
+}
+
+/* IDENTIFIERS */
+
+#site-name-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 0px;
+  font-family: "simplifica";
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+}
+
+
+

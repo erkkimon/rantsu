@@ -1,0 +1,31 @@
+{
+  "name": "rantakuntoon.fi",
+  "version": "0.0.1",
+  "homepage": "http://rantakuntoon.fi",
+  "authors": [
+    "Tom Himanen <tom.himanen@gmail.com>"
+  ],
+  "main": "index.php",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": ">=3.1.1",
+    "jasny-bootstrap": ">=3.1.1"
+  },
+  "dependencies": {
+    "ScrollToFixed": "~1.0.6",
+    "Parallax-ImageScroll": "~0.1.4",
+    "foundation": "~5.4.7"
+  }
+}

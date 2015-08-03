@@ -1,0 +1,188 @@
+/* style.css is temporarily in use and the changes should be imported to sass */
+/* IMPORTS /* 
+
+@import 'wp-base.scss';
+@import '../bower_components/foundation/scss/foundation/components/grid';
+
+/* VARIABLES */
+/* TYPOGRAPHY */
+@font-face {
+  font-family: simplifica;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/simplifica/simplifica.eot');
+  src: url('../fonts/simplifica/simplifica.eot?') format('eot'), url('../fonts/simplifica/simplifica.woff') format('woff'), url('../fonts/simplifica/simplifica.ttf') format('truetype'); }
+
+@font-face {
+  font-family: gandhi-sans-regular;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/gandhi-sans-regular/gandhi-sans-regular.eot');
+  src: url('../fonts/gandhi-sans-regular/gandhi-sans-regular.eot?') format('eot'), url('../fonts/gandhi-sans-regular/gandhi-sans-regular.woff') format('woff'), url('../fonts/gandhi-sans-regular/gandhi-sans-regular.ttf') format('truetype'); }
+
+/* ELEMENTS */
+html, body {
+  height: 100%;
+  color: #325050;
+  background: #fff;
+  font-family: 'gandhi-sans-regular'; }
+
+body {
+  padding: 0;
+  background: #ffffff; }
+
+p {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'gandhi-sans-regular'; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: 300;
+  font-family: 'simplifica';
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 2px; }
+
+a {
+  color: #1586c3;
+  text-decoration: none; }
+  a:hover {
+    color: #d9534f;
+    text-decoration: none;
+    cursor: pointer; }
+  a:visited, a:active {
+    color: #d9534f;
+    text-decoration: none; }
+
+/* NAVIGATION ELEMENTS */
+.floatbar {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  background: #333333;
+  height: 50px;
+  z-index: 99;
+  opacity: 0.9;
+  padding: 0px;
+  font-size: 20px; }
+  .floatbar ul {
+    vertical-align: middle;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    height: 50px; }
+    .floatbar ul li {
+      font-size: 16px;
+      display: inline-block;
+      height: 50px;
+      margin: 0px;
+      padding: 10px 15px 1px 15px; }
+      .floatbar ul li a {
+        color: #ffffff;
+        cursor: default;
+        font-size: 22px;
+        font-family: 'simplifica';
+        font-weight: 400;
+        letter-spacing: 3px;
+        text-transform: uppercase; }
+      .floatbar ul li:hover {
+        background: #1586c3;
+        transition: 0.5s; }
+
+.navbar {
+  background: #333333;
+  opacity: 0.9;
+  border: #333333; }
+  @media screen and (min-width: 992) {
+    .navbar {
+      right: auto;
+      background: none;
+      border: none; } }
+  .navbar .mobile-navbar-site-name {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 30px;
+    padding-top: 11px;
+    padding-right: 20px;
+    font-family: 'simplifica';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    float: right; }
+
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+  border: none;
+  border-radius: 0px; }
+  .navbar-toggle:hover {
+    background-color: transparent !important;
+    border-radius: 0px; }
+  .navbar-toggle:focus {
+    background-color: transparent !important; }
+  @media screen and (min-width: 0) {
+    .navbar-toggle {
+      display: block;
+      /* force showing the toggle */ } }
+  .navbar-toggle .icon-bar {
+    background-color: #fff !important; }
+
+.navmenu-default {
+  background-color: #333333 !important;
+  width: 230px;
+  padding-top: 20px; }
+  .navmenu-default li {
+    display: block;
+    padding: 15px 0px 0px 0px; }
+  .navmenu-default a {
+    color: #ffffff !important;
+    font-family: 'simplifica';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px; }
+
+.poster {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+  display: table;
+  vertical-align: middle; }
+  .poster .poster-title {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'simplifica';
+    font-size: 70px !important;
+    color: #ffffff; }
+
+/* COMMON */
+.arrow-box {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #1586c3; }
+
+.arrow-box:after, .arrow-box:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.arrow-box:after {
+  border-color: rgba(0, 0, 0, 0);
+  border-top-color: black;
+  border-width: 30px;
+  margin-left: -30px; }
+
+.arrow-box:before {
+  border-color: rgba(217, 83, 79, 0);
+  border-top-color: #1586c3;
+  border-width: 31px;
+  margin-left: -31px; }

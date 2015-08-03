@@ -1,0 +1,228 @@
+/* style.css is temporarily in use and the changes should be imported to sass */
+
+@charset 'UTF-8';
+
+/* IMPORTS /* 
+
+@import 'wp-base.scss';
+@import '../bower_components/foundation/scss/foundation/components/grid';
+
+/* VARIABLES */
+
+$red:    #d9534f;
+$green:  #5cb85c;
+$blue:   #1586c3;
+$black:  #333333;
+$white:  #ffffff;
+
+/* TYPOGRAPHY */
+
+@each $font-face in simplifica, gandhi-sans-regular {
+    @font-face {
+          font-family: $font-face; font-style: normal; font-weight: normal;
+          src: url('../fonts/#{$font-face}/#{$font-face}.eot');
+          src: url('../fonts/#{$font-face}/#{$font-face}.eot?') format('eot'),
+               url('../fonts/#{$font-face}/#{$font-face}.woff') format('woff'),
+               url('../fonts/#{$font-face}/#{$font-face}.ttf')  format('truetype');
+    }
+}
+
+$p-font-stack: 'gandhi-sans-regular';
+$h-font-stack: 'simplifica'; 
+
+$font-path: "../../assets/fonts";
+
+/* ELEMENTS */
+
+html,
+body {
+    height: 100%;
+    color: #325050;
+    background: #fff;
+    font-family: $p-font-stack;
+}
+
+body {
+    padding: 0;
+    background: $white;
+}
+
+p {
+    color: $black;
+    font-size: 16px; 
+    font-weight: 400;
+    font-family: $p-font-stack;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 300;
+    font-family: $h-font-stack;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+    &:hover {
+        color: $red;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    &:visited, &:active {
+        color: $red;
+        text-decoration: none;
+    }
+}
+
+/* NAVIGATION ELEMENTS */
+
+.floatbar {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background: $black;
+    height: 50px;
+    z-index: 99;
+    opacity: 0.9;
+    padding: 0px;
+    font-size: 20px;
+    ul {
+        vertical-align: middle;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        height: 50px;
+        li {
+            font-size: 16px;
+            display: inline-block;
+            height: 50px;
+            margin: 0px;
+            padding: 10px 15px 1px 15px;
+            a {
+                color: $white;
+                cursor: default;
+                font-size: 22px;
+                font-family: $h-font-stack;
+                font-weight: 400;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+            &:hover {
+                background: $blue;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+.navbar {
+    background: $black;
+    opacity: 0.9;
+    border: $black;
+    @media screen and (min-width: 992) {
+        right: auto;
+        background: none;
+        border: none;
+    }
+    .mobile-navbar-site-name {
+        color: $white;
+        font-size: 22px;
+        line-height: 30px;
+        padding-top: 11px;
+        padding-right: 20px;
+        font-family: $h-font-stack;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        float: right;
+    }
+}
+
+.navbar-toggle {
+    float: left;
+    margin-left: 15px;
+    border: none;
+    border-radius: 0px;
+    &:hover {
+        background-color: transparent !important;
+        border-radius: 0px;
+    }
+    &:focus {
+        background-color: transparent !important;
+    }
+    @media screen and (min-width: 0) {
+        display: block; /* force showing the toggle */
+    }
+    .icon-bar {
+        background-color: #fff !important;
+    }
+}
+
+.navmenu-default {
+    background-color: $black !important;
+    width: 230px;
+    padding-top: 20px;
+    li { 
+        display: block; 
+        padding: 15px 0px 0px 0px;
+    }
+    a {
+        color: $white !important;
+        font-family: $h-font-stack;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 20px;
+    }
+}
+
+.poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+    display: table;
+    vertical-align: middle;
+    .poster-title {
+        display: table-cell;    
+        vertical-align: middle;
+        text-align: center;
+        font-family: $h-font-stack;
+        font-size: 70px !important;
+        color: $white;
+    }
+}
+
+/* COMMON */
+
+.arrow-box {
+    position: relative;
+    background: rgba(0,0,0,0.5); 
+    border: 1px solid $blue;
+}
+.arrow-box:after, .arrow-box:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.arrow-box:after {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: rgb(0,0,0);
+    border-width: 30px;
+    margin-left: -30px;
+}
+.arrow-box:before {
+    border-color: rgba(217, 83, 79, 0);
+    border-top-color: $blue;
+    border-width: 31px;
+    margin-left: -31px;
+}

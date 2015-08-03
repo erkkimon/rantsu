@@ -1,0 +1,25 @@
+{
+  "name": "rantakuntoon.fi",
+  "version": "0.0.1",
+  "description": "## Libraries and Plugins * [Jasny Bootstrap](http://jasny.github.io/bootstrap/components/)",
+  "main": "assets/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erkkimon/rantakuntoon.fi.git"
+  },
+  "author": "",
+  "license": "GFDL",
+  "bugs": {
+    "url": "https://github.com/erkkimon/rantakuntoon.fi/issues"
+  },
+  "homepage": "https://github.com/erkkimon/rantakuntoon.fi",
+  "devDependencies": {
+    "gulp-plumber": "^0.6.6",
+    "gulp-sass": "^1.1.0",
+    "gulp-webserver": "^0.8.7",
+    "opn": "^1.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+/* MODIFY THESE TO BREAK FIXED FOUNDATION OFF-CANVAS MENU */
+
+article {
+    overflow-y: auto;
+}
+
+article,
+body,
+html,
+.off-canvas-wrap,
+.off-canvas-wrap .inner-wrap,
+.row {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
